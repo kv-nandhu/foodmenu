@@ -19,7 +19,9 @@ jobs:
       - name: Set up Flutter
         uses: subosito/flutter-action@v2  # Set up Flutter environment
         with:
-          flutter-version: stable  # Only specify the flutter version
+          flutter-version: '3.13.0'  # Specify a specific stable Flutter version to avoid ambiguity
+          channel: stable            # Ensure the stable channel is used
+          architecture: x64          # Ensure 64-bit architecture
 
       - name: Install dependencies
         run: |
